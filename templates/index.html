@@ -76,9 +76,23 @@
             <button id="continueBodyBtn">Continue Body</button>
         </div>
 
-        <label for="attachment">Attachment:</label>
-        <input type="file" id="attachment"><br><br>
-        <button id="uploadBtn">Upload File</button>
+        <div class="container folder-container">
+            <div class="folder">
+              <div class="front-side">
+                <div class="tip"></div>
+                <div class="cover"></div>
+              </div>
+              <div class="back-side cover"></div>
+            </div>
+            <label class="custom-file-upload">
+              <input class="title" type="file" id="attachment" />
+              Attachment
+            </label>
+          </div>
+          
+          <br><br>
+          <button id="uploadBtn">Upload File</button>
+          
 
 
         <!-- File Attachment -->

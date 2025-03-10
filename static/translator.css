@@ -25,25 +25,90 @@ select, textarea, button {
     font-size: 18px;
     border-radius: 5px;
     border: 2px solid #ddd;
+    outline: none;
 }
+
+/* ================= Button Styling and Effects ================= */
 
 button {
     width: 40%;
     height: 50px;
     padding: 10px;
     margin: 10px 0;
-    background-color: #802bb1;
+    background-color: #1C1A1C;
     color: white;
     cursor: pointer;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
 }
 
 button:hover {
-    background-color: #564f6f;
+    background: linear-gradient(0deg, #A47CF3, #683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),  /* inner light line */
+                inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),      /* inner shadow at bottom */
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2);       /* outer subtle border */
+    transform: translateY(-2px);
 }
 
+/* ================= Stop Button ================= */
+#stopBtn {
+    width: 80%;
+    background-color: #d9534f;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
 
+#stopBtn:hover {
+    background: linear-gradient(0deg, #FF6F61, #d9534f);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
 
-#senderEmail{
+/* ================= Translate Button ================= */
+#translateBtn {
+    background-color: #67c87a;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#translateBtn:hover {
+    background: linear-gradient(0deg, #6EDC8D, #67c87a);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ================= Send Email Button ================= */
+#sendEmailBtn {
+    width: 100%;
+    padding: 10px;
+    background-color: #67c87a;
+    color: white;
+    font-size: 18px;
+    border-radius: 5px;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+}
+
+#sendEmailBtn:hover {
+    background: linear-gradient(0deg, #6EDC8D, #67c87a);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+}
+
+/* ===================================================== */
+
+/* ================= Form Fields ================= */
+#senderEmail, #senderpassword, #recipientEmail {
     width: 90%;
     height: 20px;
     padding: 10px;
@@ -53,22 +118,13 @@ button:hover {
     border: 2px solid #ddd;
 }
 
-#senderpassword{
-    width: 90%;
-    height: 20px;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-}
-
-.mail_cat{
+.mail_cat {
     border-style: solid;
     border-color: black;
 }
 
-.textbox{
+/* ================= Textbox and Layout ================= */
+.textbox {
     margin-left: 10%;
     align-items: center;
     width: 80%;
@@ -82,73 +138,197 @@ textarea {
     height: 150px;
 }
 
-#stopBtn {
-    width: 80%;
-    background-color: #d9534f;
-}
-
-#stopBtn:hover {
-    background-color: #c9444f;
-}
-
-#inputLang{
-    width: 40%;
-}
-#outputLang{
+#inputLang, #outputLang {
     width: 40%;
 }
 
-#translateBtn{
-    background-color: #67c87a;
-}
-
-#recipientEmail {
-    width: 80%;
-    padding: 10px;
-    margin: 10px 0;
-    font-size: 18px;
-    border-radius: 5px;
-    border: 2px solid #ddd;
-}
-
-#sendEmailBtn {
-    width: 100%;
-    padding: 10px;
-    background-color: #67c87a;
-    color: white;
-    font-size: 18px;
-    border-radius: 5px;
-    border: none;
-    cursor: pointer;
-}
-
-#sendEmailBtn:hover {
-    background-color: #57b07a;
-}
-
-
+/* ================= Media Queries for Responsiveness ================= */
 @media (max-width: 768px) {
     .textbox {
         flex-direction: column;
     }
+
     textarea {
         width: 100%;
     }
+
     #inputLang, #outputLang {
         width: 100%;
     }
+
+    button {
+        width: 70%;
+    }
+
+    #stopBtn {
+        width: 70%;
+    }
 }
+
 @media (max-width: 480px) {
     h1 {
         font-size: 28px;
     }
+
     button {
         font-size: 16px;
     }
+
     #sendEmailBtn {
         font-size: 16px;
     }
+
     textarea {
         height: 120px;
     }
 }
+
+/* ================= Folder Upload Design ================= */
+.folder-container {
+    --transition: 350ms;
+    --folder-W: 120px;
+    --folder-H: 80px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 10px;
+    background: linear-gradient(135deg, #A47CF3, #683FEA);
+    border-radius: 15px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+    height: calc(var(--folder-H) * 1.7);
+    position: relative;
+    margin: 50px 120px;
+  }
+  
+  .folder {
+    position: absolute;
+    top: -20px;
+    left: calc(50% - 60px);
+    animation: float 2.5s infinite ease-in-out;
+    transition: transform var(--transition) ease;
+  }
+  
+  .folder:hover {
+    transform: scale(1.05);
+  }
+  
+  .folder .front-side,
+  .folder .back-side {
+    position: absolute;
+    transition: transform var(--transition);
+    transform-origin: bottom center;
+  }
+  
+  .folder .back-side::before,
+  .folder .back-side::after {
+    content: "";
+    display: block;
+    background-color: white;
+    opacity: 0.5;
+    width: var(--folder-W);
+    height: var(--folder-H);
+    position: absolute;
+    transform-origin: bottom center;
+    border-radius: 15px;
+    transition: transform 350ms;
+    z-index: 0;
+  }
+  
+  .folder-container:hover .back-side::before {
+    transform: rotateX(-5deg) skewX(5deg);
+  }
+  
+  .folder-container:hover .back-side::after {
+    transform: rotateX(-15deg) skewX(12deg);
+  }
+  
+  .folder .front-side {
+    z-index: 1;
+  }
+  
+  .folder-container:hover .front-side {
+    transform: rotateX(-40deg) skewX(15deg);
+  }
+  
+  .folder .tip {
+    background: linear-gradient(135deg, #ff9a56, #ff6f56);
+    width: 80px;
+    height: 20px;
+    border-radius: 12px 12px 0 0;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -10px;
+    z-index: 2;
+  }
+  
+  .folder .cover {
+    background: linear-gradient(135deg, #ffe563, #ffc663);
+    width: var(--folder-W);
+    height: var(--folder-H);
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    border-radius: 10px;
+  }
+  
+  /* ============= Custom File Upload (Label) ============ */
+  .custom-file-upload {
+    font-size: 1.1em;
+    color: #ffffff;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.2);
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Only shadow, NO glow */
+    cursor: pointer;
+    transition: background var(--transition) ease;
+    display: inline-block;
+    width: 70%;
+    padding: 10px 35px;
+    position: relative;
+  }
+  
+  .custom-file-upload:hover {
+    background: rgba(255, 255, 255, 0.3); /* Subtle hover effect */
+  }
+  
+  /* Hides the default file input */
+  .custom-file-upload input[type="file"] {
+    display: none;
+  }
+  
+  /* ============ Floating Animation ============ */
+  @keyframes float {
+    0% {
+      transform: translateY(0px);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0px);
+    }
+  }
+  
+  /* ================= Button Consistency ================= */
+  button {
+    width: 40%;
+    height: 50px;
+    padding: 10px;
+    margin: 10px 0;
+    background-color: #1C1A1C;
+    color: white;
+    cursor: pointer;
+    border: none;
+    position: relative;
+    transition: all 0.3s ease-in-out;
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  }
+  
+  button:hover {
+    background: linear-gradient(0deg, #A47CF3, #683FEA);
+    box-shadow: inset 0px 1px 0px 0px rgba(255, 255, 255, 0.4),
+                inset 0px -4px 0px 0px rgba(0, 0, 0, 0.2),
+                0px 0px 0px 4px rgba(255, 255, 255, 0.2);
+    transform: translateY(-2px);
+  }
+  
