@@ -332,3 +332,117 @@ textarea {
     transform: translateY(-2px);
   }
   
+  /* ================ Responsive Adjustments =============== */
+
+/* Tablets and Below */
+@media (max-width: 768px) {
+    .folder-container {
+        --folder-W: 100px;
+        --folder-H: 65px;
+        margin: 40px 60px;
+        height: calc(var(--folder-H) * 1.8);
+    }
+
+    .folder {
+        left: calc(50% - 50px);
+    }
+
+    .folder .tip {
+        width: 70px;
+        height: 18px;
+    }
+
+    .custom-file-upload {
+        width: 80%;
+    }
+
+    button {
+        width: 60%;
+    }
+}
+
+/* Mobile Devices */
+@media (max-width: 480px) {
+    .folder-container {
+        --folder-W: 85px;
+        --folder-H: 55px;
+        margin: 50px 40px;
+        height: calc(var(--folder-H) * 2);
+    }
+
+    .folder {
+        left: calc(50% - 42.5px);
+    }
+
+    .folder .tip {
+        width: 60px;
+        height: 16px;
+    }
+
+    .custom-file-upload {
+        width: 70%;
+        padding: 10px 20px;
+    }
+
+    button {
+        width: 75%;
+    }
+}
+
+/* Small Mobiles (375px) */
+@media (max-width: 375px) {
+    .folder-container {
+        --folder-W: 75px;
+        --folder-H: 50px;
+        margin: 40px 20px;
+        height: calc(var(--folder-H) * 2.1);
+    }
+
+    .folder {
+        left: calc(50% - 37.5px);
+    }
+
+    .folder .tip {
+        width: 55px;
+        height: 14px;
+    }
+
+    .custom-file-upload {
+        width: 95%;
+        padding: 10px 15px;
+    }
+
+    button {
+        width: 85%;
+    }
+}
+
+/* Extra Small (320px) */
+@media (max-width: 320px) {
+    .folder-container {
+        --folder-W: 65px;
+        --folder-H: 45px;
+        margin: 50px 15px;
+        height: calc(var(--folder-H) * 2.2);
+    }
+
+    .folder {
+        left: calc(50% - 32.5px);
+    }
+
+    .folder .tip {
+        width: 50px;
+        height: 12px;
+    }
+
+    .custom-file-upload {
+        width: 70%;
+        padding: 8px 10px;
+        font-size: 1em;
+    }
+
+    button {
+        width: 90%;
+        height: 45px;
+    }
+}
