@@ -1,8 +1,8 @@
 body {
     background-color: #2d283e;
     font-family: 'Comic Sans MS', sans-serif;
-    cursor: url('/assets/mic-on.svg') 16 16, auto;
-    transition: cursor 0.2s ease-in-out;
+    /* cursor: url('/assets/mic-on.svg') 16 16, auto;
+    transition: cursor 0.2s ease-in-out; */
 }
 
 .container {
@@ -118,12 +118,12 @@ button:hover {
     margin: 10px 0;
     font-size: 18px;
     border-radius: 5px;
-    border: 2px solid #ddd;
+    border: 4px solid #a47cf3;
 }
 
 .mail_cat {
     border-style: solid;
-    border-color: black;
+    border-color: #a47cf3;
 }
 
 /* ================= Textbox and Layout ================= */
