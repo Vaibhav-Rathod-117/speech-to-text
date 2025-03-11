@@ -192,6 +192,8 @@ textarea {
 
 #inputLang, #outputLang {
     width: 40%;
+    border: 2px solid #a47cf3;
+    font-family: 'Comic Sans MS', sans-serif;
 }
 
 /* ================= Media Queries for Responsiveness ================= */
